@@ -125,6 +125,11 @@ export const routesConfig = [
     component: 'Email/index',
   },
   {
+    path:'/tax',
+    component:'Tax',
+
+  },
+  {
     path: '/email/read/:id',
     component: 'Email/EmailRead',
   },

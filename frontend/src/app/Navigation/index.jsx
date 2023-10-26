@@ -45,6 +45,7 @@ const SETTINGS_SUBMENU = [
   { key: '/email', title: 'Email templates' },
 
   { key: '/payment/mode', title: 'Payment Mode' },
+  { key: '/tax', title: 'Tax' },
   { key: '/settings/advanced', title: 'Advanced Settings' },
 ];
 

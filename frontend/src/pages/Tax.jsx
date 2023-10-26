@@ -2,9 +2,9 @@ import React from 'react';
 import { Switch } from 'antd';
 import { CloseOutlined, CheckOutlined } from '@ant-design/icons';
 import CrudModule from '@/modules/CrudModule';
-import PaymentModeForm from '@/forms/PaymentModeForm';
+import Taxfrom from '@/forms/TaxForm';
 
-export default function PaymentMode() {
+export default function Tax() {
   const entity = 'paymentMode';
   const searchConfig = {
     displayLabels: ['name'],
@@ -16,12 +16,12 @@ export default function PaymentMode() {
 
   const readColumns = [
     {
-      title: 'Payment Mode',
-      dataIndex: 'name',
+      title: 'Tax Name',
+      dataIndex: 'taxName',
     },
     {
-      title: 'Description',
-      dataIndex: 'description',
+      title: 'Tax Value',
+      dataIndex: 'taxValue',
     },
     {
       title: 'Is Default',
@@ -34,12 +34,12 @@ export default function PaymentMode() {
   ];
   const dataTableColumns = [
     {
-      title: 'Payment Mode',
-      dataIndex: 'name',
+      title: 'Tax Name',
+      dataIndex: 'taxName',
     },
     {
-      title: 'Description',
-      dataIndex: 'description',
+      title: 'Tax Value',
+      dataIndex: 'taxValue',
     },
     {
       title: 'Is Default',
@@ -85,12 +85,12 @@ export default function PaymentMode() {
     },
   ];
 
-  const ADD_NEW_ENTITY = 'Add new payment mode';
-  const DATATABLE_TITLE = 'Payment Mode List';
+  const ADD_NEW_ENTITY = 'Add new Tax';
+  const DATATABLE_TITLE = 'Tax List';
   const ENTITY_NAME = 'payment mode';
-  const CREATE_ENTITY = 'Create payment mode';
-  const UPDATE_ENTITY = 'Update payment mode';
-  const PANEL_TITLE = 'Currency Panel';
+  const CREATE_ENTITY = 'Create Tax';
+  const UPDATE_ENTITY = 'Update Tax';
+  const PANEL_TITLE = 'Tax Panel';
 
   const config = {
     entity,
@@ -107,8 +107,8 @@ export default function PaymentMode() {
   };
   return (
     <CrudModule
-      createForm={<PaymentModeForm />}
-      updateForm={<PaymentModeForm isUpdateForm={true} />}
+      createForm={<Taxfrom />}
+      updateForm={<Taxfrom isUpdateForm={true} />}
       config={config}
     />
   );
